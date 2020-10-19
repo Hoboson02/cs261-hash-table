@@ -5,5 +5,17 @@
 
 
 class HashTable:
+    def __init__(self, size=10): 
+        self.data = [[] for __ in range(size)]
+        self.size = size
+        return None
 
-    pass
+    def __setitem__(self, key, value):
+        self.data.append([key, value])
+        return None
+
+    def __getitem__(self, key):
+        return 
+
+    def hash(self, key):
+        return hash(key) % len(self.data)
